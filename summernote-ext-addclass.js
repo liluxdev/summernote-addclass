@@ -69,9 +69,10 @@
                             var tag = item.tag || "div";
                             var title = item.title;
                             var style = item.style ? ' style="' + item.style + '" ' : '';
+                            var cssclass = item.value || item.cssclass || item;
+                            cssclass = "class='"+cssclass+"'";
 
-
-                            return '<' + tag + ' ' + style + item.cssclass + '>' + title + '</' + tag + '>';
+                            return '<' + tag + ' ' + style + cssclass + '>' + title + '</' + tag + '>';
                         },
                         click: function (event, namespace, value) {
 
