@@ -28,14 +28,14 @@
          */
         'addclass': function (context) {
             var self = this;
-            if (typeof context.options.addclass === 'undefined'){
-                   context.options.addclass={};
+            if (typeof context.options.addclass === 'undefined') {
+                context.options.addclass = {};
             }
             if (typeof context.options.addclass.classTags === 'undefined') {
                 context.options.addclass.classTags = [
                     //bootstrap3
                     'label', 'img-responsive', 'img-rounded', 'img-thumbnail', 'img-circle', 'sr-only', 'lead', 'text-muted', 'text-primary', 'text-warning', 'text-danger', 'text-success', 'text-info', 'text-left', 'text-right', 'text-center', 'page-header', 'list-unstyled', 'list-inline', 'initialism', 'pull-right', 'prettyprint', 'pre-scrollable', 'container', 'table-bordered', 'table-responsive', 'form-control', 'form-group', 'input-sm', 'input-lg', 'control-label', 'form-control-static', 'help-block', 'btn', 'active', 'btn-default', 'btn-primary', 'btn-warning', 'btn-danger', 'btn-success', 'btn-info', 'btn-link', 'btn-lg', 'btn-xs', 'btn-block', 'fade', 'in', 'collapse', 'collapsing', 'breadcrumb', 'label-default', 'label-primary', 'label-success', 'label-info', 'label-warning', 'label-danger', 'badge', 'jumbotron', 'thumbnail', 'caption', 'alert', 'alert-link', 'alert-dismissable', 'close', 'alert-success', 'alert-info', 'alert-warning', 'alert-danger', 'panel', 'arrow', 'carousel', 'carousel-inner', 'visible-xs', 'visible-sm', 'visible-md', 'visible-lg', 'hidden-xs', 'hidden-sm', 'hidden-md', 'hidden-lg', 'visible-print', '.hidden-print'
-                    ,
+                            ,
                     //uikit
                     'uk-button', 'uk-button uk-button-large', 'uk-button uk-button-success', 'uk-button uk-button-primary', 'uk-button uk-button-warning', 'uk-button uk-button-danger'];
                 //  console.log("Please define your summernote.options.addclass.classTags array");
@@ -43,7 +43,7 @@
             // ui has renders to build ui elements.
             //  - you can create a button with `ui.button`
             var ui = $.summernote.ui;
-            
+
             addStyleString(".scrollable-menu {height: auto; max-height: 200px; max-width:300px; overflow-x: hidden;}");
 
             context.memo('button.addclass', function () {
@@ -77,10 +77,19 @@
 
                             event.preventDefault();
                             value = value || $(event.target).closest('[data-value]').data('value');
-                            if (typeof context.options.addclass.debug !== 'undefined' && context.options.addclass.debug){
-                                console.debug($(window.getSelection().focusNode.parentElement,".note-editable"),"toggling class: "+value);
+
+
+
+                            var $node = $(context.invoke("restoreTarget")) || $(window.getSelection().focusNode.parentElement, ".note-editable");
+                            
+                            if (typeof context.options.addclass.debug !== 'undefined' && context.options.addclass.debug) {
+                                console.debug(context.invoke("restoreTarget"), $node, "toggling class: " + value, window.getSelection());
                             }
-                            $(window.getSelection().focusNode.parentElement,".note-editable").toggleClass(value)
+
+                        
+
+
+                            $node.toggleClass(value)
 
 
                         }
