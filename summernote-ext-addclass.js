@@ -78,9 +78,9 @@
                             event.preventDefault();
                             value = value || $(event.target).closest('[data-value]').data('value');
                             if (typeof context.options.addclass.debug !== 'undefined' && context.options.addclass.debug){
-                                console.debug($(window.getSelection().focusNode.parentElement),"toggling class: "+value);
+                                console.debug($(window.getSelection().focusNode.parentElement,".note-editable"),"toggling class: "+value);
                             }
-                            $(window.getSelection().focusNode.parentElement).toggleClass(value)
+                            $(window.getSelection().focusNode.parentElement,".note-editable").toggleClass(value)
 
 
                         }
