@@ -1,7 +1,8 @@
 /**
  * 
  * copyright 2016 creativeprogramming.it di Stefano Gargiulo
- * info@creativeprogramming.it
+ * email: info@creativeprogramming.it
+ * accepting tips at https://www.paypal.me/creativedotit 
  * license: MIT
  * 
  */
@@ -73,7 +74,7 @@
 
                             event.preventDefault();
                             value = value || $(event.target).closest('[data-value]').data('value');
-                            $(window.getSelection().focusNode.parentElement).addClass(value)
+                            $(window.getSelection().focusNode.parentElement).toggleClass(value)
 
 
                         }
