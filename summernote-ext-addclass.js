@@ -63,14 +63,14 @@
                         template: function (item) {
 
                             if (typeof item === 'string') {
-                                item = {tag: "div", title: item, cssclass: 'class="' + item + '"'};
+                                item = {tag: "div", title: item, value: item};
                             }
 
-                            var tag = item.tag || "div";
+                            var tag = item.tag;
                             var title = item.title;
                             var style = item.style ? ' style="' + item.style + '" ' : '';
-                            var cssclass = item.value || item.cssclass || item;
-                            cssclass = "class='"+cssclass+"'";
+                            var cssclass = item.value ? ' class="' + item.value + '" ' : '';
+                   
 
                             return '<' + tag + ' ' + style + cssclass + '>' + title + '</' + tag + '>';
                         },
