@@ -59,7 +59,7 @@
                     }),
                     ui.dropdown({
                         className: 'dropdown-style scrollable-menu',
-                        items: context.options.classTags,
+                        items: context.options.addclass.classTags,
                         template: function (item) {
 
                             if (typeof item === 'string') {
