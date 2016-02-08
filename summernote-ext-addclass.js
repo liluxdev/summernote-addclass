@@ -52,7 +52,7 @@
                         className: 'dropdown-toggle',
                         contents: '<i class="fa fa-css3"\/>' + ' ' + ui.icon(context.options.icons.caret, 'span'),
                         //ui.icon(context.options.icons.magic) + ' ' + ui.icon(context.options.icons.caret, 'span'),
-                        tooltip: 'add css class', //lang.style.style,
+                        tooltip: 'toggle CSS class', //lang.style.style,
                         data: {
                             toggle: 'dropdown'
                         }
