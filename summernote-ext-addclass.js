@@ -81,7 +81,7 @@
                                 $node = $(document.getSelection().focusNode.parentElement, ".note-editable");
                             }
                             
-                            if (typeof context.options.addclass.debug !== 'undefined' && context.options.addclass.debug) {
+                            if (typeof context.options.addclass !== 'undefined' && typeof context.options.addclass.debug !== 'undefined' && context.options.addclass.debug) {
                                 console.debug(context.invoke("restoreTarget"), $node, "toggling class: " + value, window.getSelection());
                             }
 
