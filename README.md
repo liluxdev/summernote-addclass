@@ -1,13 +1,25 @@
 # summernote-addclass
+
 A plugin for summernote editor to allow user to add custom css classes (custom styling) to the selected elements 
 
-[Live demo](https://jsfiddle.net/rastrano/dtgr5q29/) (check the CSS3 icon button)
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/954291/12879122/07e6edd0-ce2f-11e5-94f8-bd630fc7b07a.png" />
+</p>
 
-[Getting started](https://github.com/creativeprogramming/summernote-addclass/wiki/) 
+## Getting started
 
-license: MIT
+You can find all the information need it to use this summernote extension [**here**](https://github.com/creativeprogramming/summernote-addclass/wiki/).
 
-accepting tips at https://www.paypal.me/creativedotit 
+Also, we have a [**live demo**](https://jsfiddle.net/rastrano/dtgr5q29/) (check the CSS3 icon button).
 
+## Support this work
 
-![2016-02-08_06h38_08](https://cloud.githubusercontent.com/assets/954291/12879122/07e6edd0-ce2f-11e5-94f8-bd630fc7b07a.png)
+Tip me at https://www.paypal.me/creativedotit 
+
+## Freamworks
+
+For *rails* we have a gem: [summernote-ext-addclass-rails](https://github.com/WaKeMaTTa/summernote-ext-addclass-rails)
+
+## License
+
+[MIT](./LICENSE)
