@@ -16,6 +16,10 @@ Also, we have a [**live demo**](https://jsfiddle.net/rastrano/dtgr5q29/) (check 
 
 Tip me at https://www.paypal.me/creativedotit 
 
+## Freamworks
+
+For *rails* we have a gem: [summernote-ext-addclass-rails](https://github.com/WaKeMaTTa/summernote-ext-addclass-rails)
+
 ## License
 
 [MIT](./LICENSE)
